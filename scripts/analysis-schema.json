@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "translated_zh": { "type": "string" },
+    "summary_zh": { "type": "string" },
+    "estimate_zh": { "type": "string" },
+    "confidence_zh": { "type": "string" }
+  },
+  "required": ["translated_zh", "summary_zh", "estimate_zh", "confidence_zh"],
+  "additionalProperties": false
+}
