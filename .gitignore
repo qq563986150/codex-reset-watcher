@@ -1,0 +1,22 @@
+# Local runtime data
+latest.json
+usage.json
+analysis.json
+window-state.json
+notification-state.json
+CodexResetWatcher/
+
+# Release artifacts
+*.zip
+*.7z
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# PowerShell diagnostics
+*.clixml
+*.log
