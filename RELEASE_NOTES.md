@@ -1,3 +1,15 @@
+# v0.1.1 低内存自动启动
+
+- 新增轻量原生 .NET 启动宿主，Codex 启动时自动打开悬浮窗。
+- Codex 未运行时不加载 WPF、额度接口或网络请求。
+- 常驻私有内存实测由约 67 MB 降至约 9–13 MB。
+- 单实例运行；Codex 退出后自动释放悬浮窗。
+- 保留 PowerShell 监听器作为兼容回退。
+
+English: Adds a low-memory native .NET startup host that launches the widget only while Codex is running.
+
+---
+
 # v0.1.0 首次开源发布
 
 Codex 额度雷达的第一个公开版本，面向 Windows Codex 桌面端。

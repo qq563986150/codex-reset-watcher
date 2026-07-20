@@ -1,6 +1,6 @@
 {
   "name": "codex-reset-watcher",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Codex-bound Windows edge widget for predicted reset time, local quota and announcements.",
   "author": {
     "name": "qq563986150"

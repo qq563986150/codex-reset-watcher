@@ -47,19 +47,21 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\Show-LatestRes
 
 ### 随 Codex 自动出现
 
-安装登录启动监听：
+安装低内存自动启动宿主：
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\Install-Autostart.ps1
 ```
 
-安装后重新登录 Windows，或直接运行：
+安装脚本会立即启动宿主，无需重启 Windows。以后登录 Windows 时，宿主会在后台等待；检测到 Codex 启动后才加载悬浮窗，Codex 退出后自动释放悬浮窗。
+
+如果系统无法编译轻量宿主，可使用兼容监听器：
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\Watch-Codex.ps1
 ```
 
-监听器只负责观察 Codex 是否运行；Codex 关闭后悬浮窗会同步退出。
+轻量宿主是无界面的原生 .NET 小进程，不会常驻加载 WPF、额度接口或网络请求。它每 2.5 秒检查一次 Codex 进程；主要内存仅在 Codex 打开并显示悬浮窗时产生。兼容监听器功能相同，但 PowerShell 常驻内存会更高。
 
 ### 卸载自启动
 
